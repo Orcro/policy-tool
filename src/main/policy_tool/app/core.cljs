@@ -1,18 +1,20 @@
 (ns policy-tool.app.core
-  (:require [reagent.dom :as rdom]))
+  (:require [reagent.dom :as rdom]
+            [reagent.core :as r]
+            [file-saver :as fs]))
 
 (defn mainlayout []
- [:div.row
- [:div.col]
- [:div.col
- [:h1 "Policy Generator"]
- [:h2 "L2 heading style"]]
- [:div.col
- [:p "A quick brown fox jumped over the lazy doooog. A quick brown fox jumped over the lazy doooog. A quick brown fox jumped over the lazy doooog. A quick brown fox jumped over the lazy doooog. A quick brown fox jumped over the lazy doooog. A quick brown fox jumped over the lazy doooog. A quick brown fox jumped over the lazy doooog. A quick brown fox jumped over the lazy doooog. A quick brown fox jumped over the lazy doooog. A quick brown fox jumped over the lazy doooog. A quick brown fox jumped over the lazy doooog. A quick brown fox jumped over the lazy doooog."]]
- [:div.col]])
+  [:div.row
+   [:div.col]
+   [:div.col
+    [:h1 "Policy Generator"]
+    [:h2 "L2 heading style"]]
+   [:div.col
+    [:p "A quick brown fox jumped over the lazy doooog. A quick brown fox jumped over the lazy doooog. A quick brown fox jumped over the lazy doooog. A quick brown fox jumped over the lazy doooog. A quick brown fox jumped over the lazy doooog. A quick brown fox jumped over the lazy doooog. A quick brown fox jumped over the lazy doooog. A quick brown fox jumped over the lazy doooog. A quick brown fox jumped over the lazy doooog. A quick brown fox jumped over the lazy doooog. A quick brown fox jumped over the lazy doooog. A quick brown fox jumped over the lazy doooog."]]
+   [:div.col]])
 
 (defn app []
- [mainlayout])
+  [mainlayout])
 
 (defn render []
   (rdom/render [app] (.getElementById js/document "root")))
