@@ -3,6 +3,15 @@
             [reagent.core :as r]
             [file-saver :as fs]))
 
+(def download-me (new js/Blob ["Hello wurld"] ["text/plain"]))
+
+(fs/saveAs download-me "hw.txt")
+
+(defn download-button []
+  [:div
+   [:input {:type "button" :value "press me"
+            :on-click}]])
+
 (defn mainlayout []
   [:div.row
    [:div.col]
